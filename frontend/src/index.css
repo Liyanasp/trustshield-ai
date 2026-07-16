@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-slate-950 text-slate-100;
+  }
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #020617;
+}
+::-webkit-scrollbar-thumb {
+  background: #7c3aed;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #00f5ff;
+}
+
+/* Custom keyframes for rings and sweeps */
+@keyframes ringSweep {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.animate-ring-sweep {
+  animation: ringSweep 15s linear infinite;
+}
